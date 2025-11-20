@@ -25,14 +25,13 @@ jobs:
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-m2
+          restore-keys: ${{ runner.os }}-m2
 
-      - name: Build with Maven
+      - name: Build with Maven (Fix Lombok & TestNG)
         run: |
-          mvn clean install \
-            -Dmaven.compiler.forceJavacCompilerUse=true \
-            -Djdk.compiler.addExports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED
+          mvn -Dmaven.compiler.forceJavacCompilerUse=true \
+              -Djdk.compiler.addExports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED \
+              clean install
 
       - name: Run Selenium Tests
         run: mvn test
