@@ -9,28 +9,27 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
 
- <!-- Extent Reports -->
-    <dependency>
-        <groupId>com.aventstack</groupId>
-        <artifactId>extentreports</artifactId>
-        <version>5.0.9</version>
-    </dependency>
+        <!-- Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
 
-
-		<!-- Selenium Java -->
+        <!-- Selenium Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
 
-		<!-- TestNG -->
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -43,13 +42,14 @@
     <build>
         <plugins>
 
-            <!-- Compiler plugin -->
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <release>21</release>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
 
