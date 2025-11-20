@@ -1,0 +1,11 @@
+# Ignore test-output (TestNG & Extent Reports)
+test-output/
+
+# Ignore IntelliJ & Eclipse files
+.idea/
+*.iml
+target/
+bin/
+
+# Ignore log files
+*.log
